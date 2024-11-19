@@ -1,6 +1,11 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Button, SearchBar } from "@/components/ui";
 
 function InitPage() {
+    const router = useRouter();
+
     return (
         <div className="page">
             <aside className="page__aside">
@@ -27,7 +32,27 @@ function InitPage() {
                     </ul>
                 </div>
             </aside>
-            <main className="page__main"></main>
+            <main className="page__main">
+                <div className="flex flex-col items-center justify-center gap-5 mb-6">
+                    <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+                        How to start:
+                    </h3>
+                    <div className="flex flex-col items-center gap-3">
+                        <small className="text-sm font-normal leading-none">
+                            1. Create a page
+                        </small>
+                        <small className="text-sm font-normal leading-none">
+                            2. Add boards to page
+                        </small>
+                    </div>
+                    <Button
+                        className="text-[#E79057] bg-transparent border border-[#E79057] hover:bg-[#FFF9F5] w-full"
+                        onClick={() => router.push("/board/1")}
+                    >
+                        Add New Page
+                    </Button>
+                </div>
+            </main>
         </div>
     );
 }
