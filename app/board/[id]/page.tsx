@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import { Button, Card, SearchBar, Progress, LabelDatePicker, Separator, Checkbox } from "@/components/ui";
-import { ChevronLeft, ChevronUp } from "lucide-react";
+import { CardBoard } from "@/features";
+import { Button, SearchBar, Progress, LabelDatePicker } from "@/components/ui";
+import { ChevronLeft } from "lucide-react";
 import styles from "./page.module.scss";
 
 function BoardPage() {
@@ -12,9 +13,7 @@ function BoardPage() {
                 {/* 검색창 ui */}
                 <SearchBar placeholder="검색어를 입력하세요."></SearchBar>
                 {/* add new page 버튼 ui */}
-                <Button className="text-[#E79057] bg-white border border-[#E79057] hover:bg-[#FFF9F5]">
-                    Add New Page
-                </Button>
+                <Button className="text-[#E79057] bg-white border border-[#E79057] hover:bg-[#FFF9F5]">Add New Page</Button>
                 {/* todo 목록 ui 1개 */}
                 <div className="flex flex-col mt-4 gap-1">
                     <small className="text-sm font-medium leading-none text-[#a6a6a6]">
@@ -62,9 +61,7 @@ function BoardPage() {
                             <LabelDatePicker label={"From"} />
                             <LabelDatePicker label={"To"} />
                         </div>
-                        <Button className="text-white bg-[#E79057] hover:bg-[#E26F24] hover:ring-1 hover:ring-[#E26F24] hover:ring-offset-1 active:bg-[#D5753D] hover:shadow-lg">
-                            Add New Board
-                        </Button>
+                        <Button className="text-white bg-[#E79057] hover:bg-[#E26F24] hover:ring-1 hover:ring-[#E26F24] hover:ring-offset-1 active:bg-[#D5753D] hover:shadow-lg">Add New Board</Button>
                     </div>
                 </div>
                 <div className={styles.body}>
@@ -80,48 +77,8 @@ function BoardPage() {
                     </div> */}
                     {/* Add New Board 버튼 클릭으로 인한 Board 데이터가 있을 경우 */}
                     <div className={styles.body__isData}>
-                    <Card className="w-full flex flex-col items-center p-5">
-                            {/* 게시물 카드 제목 영역*/}
-                            <div className="w-full flex items-center justify-between mb-4">
-                                <div className="flex items-center justify-start gap-2">
-                                    <Checkbox className="h-5 w-5" />
-                                    <input
-                                        type="text"
-                                        placeholder="제목을 입력하세요."
-                                        className="text-xl outline-none"
-                                        disabled={true}
-                                    />
-                                </div>
-                                <Button variant={"ghost"} size={"icon"}>
-                                    <ChevronUp className="text-[#6d6d6d]" />
-                                </Button>
-                            </div>
-                            {/* 캘린더 및 버튼 박스 영역 */}
-                            <div className="w-full flex items-center justify-between">
-                                {/* 캘린더 박스 */}
-                                <div className="flex items-center gap-5">
-                                    <LabelDatePicker label={"From"} />
-                                    <LabelDatePicker label={"To"} />
-                                </div>
-                                {/* 버튼 박스 */}
-                                <div className="flex items-center">
-                                    <Button variant={"ghost"} className="font-normal text-[#6D6D6D]">
-                                        Duplicate
-                                    </Button>
-                                    <Button
-                                        variant={"ghost"}
-                                        className="font-normal text-rose-600 hover:text-rose-600 hover:bg-red-50"
-                                    >
-                                        Delete
-                                    </Button>
-                                </div>
-                            </div>
-                            <Separator className="my-3" />
-                            {/* Add Contents 버튼 영역 */}
-                            <Button variant={"ghost"} className="font-normal text-[#6D6D6D]">
-                                Add Contents
-                            </Button>
-                        </Card>
+                        <CardBoard />
+                        <CardBoard />
                     </div>
                 </div>
             </main>

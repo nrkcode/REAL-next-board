@@ -45,12 +45,7 @@ function InitPage() {
                             2. Add boards to page
                         </small>
                     </div>
-                    <Button
-                        className="text-[#E79057] bg-transparent border border-[#E79057] hover:bg-[#FFF9F5] w-full"
-                        onClick={() => router.push("/board/1")}
-                    >
-                        Add New Page
-                    </Button>
+                    <Button className="text-[#E79057] bg-white border border-[#E79057] hover:bg-[#FFF9F5]" onClick={() => router.push("/board/1")}>
                 </div>
             </main>
         </div>
