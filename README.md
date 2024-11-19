@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 앞부분 놓쳐서... 다시 공부하며 새로 만든 Next.js 교안 repository
+## ( 24-11-19 ~ )
 
-## Getting Started
 
-First, run the development server:
+1. `npx shadcn@latest init` 해서 next.js 프로젝트 만들기
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. styles 폴더 만들어서 global.css옮긴 다음에 위에 명령어 한번더해야 shadcn ui가 다운로드되네요...
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. `npm i sass`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+로컬환경에서 http://localhost:3000 접속하면 된다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 작업 과정
 
-## Learn More
+24-11-19
 
-To learn more about Next.js, take a look at the following resources:
+1. 메인 페이지 aside와 main 구분하기
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. 각 구역에 구성요소 넣기
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Add New Page 버튼 기능 구현 (페이지 라우팅 처리)
 
-## Deploy on Vercel
+4. 새 페이지 화면 헤더와 바디 ui 구현, 바디는 보드들로 구성됨
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. 보드를 피쳐(Features)로 분리
+- 왠지 위젯이 더 맞는 것 같기도... 아님말고... 어렵다!
+-- https://emewjin.github.io/feature-sliced-design/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**남은 작업**
+
+* 보드 추가를 위한 Add New Board 버튼 기능 구현
+
+* 보드에 Add Components 등 기능 구현
+
+* Add Components Dialog
+
+* DB 연결
+
+등
+
