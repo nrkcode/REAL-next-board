@@ -32,31 +32,24 @@ function BoardPage() {
                 </div>
             </aside>
             <main className="page__main">
-                <div className={styles.header}>
+            <div className={styles.header}>
                     <div className={styles[`header__btn-box`]}>
                         <Button variant={"outline"} size={"icon"}>
                             <ChevronLeft />
                         </Button>
                         <Button variant={"secondary"}>저장</Button>
                     </div>
-                    <div className="styles.header__top">
+                    <div className={styles.header__top}>
                         {/* 제목 입력 Input 섹션 */}
-                        {/* <Input placeholder="Enter Title Here!" /> */}
-                        <input
-                            type="text"
-                            placeholder="Enter Title Here!"
-                            className={styles.header__top__input}
-                        />
+                        <input type="text" placeholder="Enter Title Here!" className={styles.header__top__input} />
                         {/* 진행상황 척도 그래프 섹션 */}
-                        <div className="flex items-center justify-start pt-2 gap-4">
-                            <small className="text-sm font-medium leading-none text-[#6D6D6D]">
-                                1/10 Completed
-                            </small>
+                        <div className="flex items-center justify-start gap-4">
+                            <small className="text-sm font-medium leading-none text-[#6D6D6D]">1/10 Completed</small>
                             <Progress className="w-60 h-[10px]" value={33} />
                         </div>
                     </div>
+                    {/* 캘린더 + Add New Board 버튼 섹션 */}
                     <div className={styles.header__bottom}>
-                        {/* 캘린더 + Add New Board 버튼 섹션 */}
                         <div className="flex items-center gap-5">
                             <LabelDatePicker label={"From"} />
                             <LabelDatePicker label={"To"} />
@@ -72,7 +65,7 @@ function BoardPage() {
                             Click the button and start flashing!
                         </small>
                         <button onClick={createBoard}>
-                            <img src="/assets/images/button.svg" width={74} height={74} alt="rounded-button" />
+                            <Image src="/assets/images/button.svg" width={74} height={74} alt="rounded-button" />
                         </button>
                     </div> */}
                     {/* Add New Board 버튼 클릭으로 인한 Board 데이터가 있을 경우 */}
