@@ -1,29 +1,34 @@
-import { Input, Button, SearchBar, Progress } from "@/components/ui";
+"use client";
+
+import * as React from "react";
+import {
+    Input, Button, SearchBar, Progress, LabelDatePicker } from "@/components/ui";
 import styles from "./page.module.scss";
 
 function BoardPage() {
+
     return (
         <div className="page">
             <aside className="page__aside">
-                {/* 검색창 UI */}
-                <SearchBar placeholder="검색어를 입력하세요." />
-                {/* Add New Page 버튼 UI */}
+                {/* 검색창 ui */}
+                <SearchBar placeholder="검색어를 입력하세요."></SearchBar>
+                {/* add new page 버튼 ui */}
                 <Button className="text-[#E79057] bg-white border border-[#E79057] hover:bg-[#FFF9F5]">
                     Add New Page
                 </Button>
-                {/* TODO 목록 UI 하나 */}
-                <div className="flex flex-col mt-4 gap-2">
-                    <small className="text-sm font-medium leading-none text-[#A6A6A6]">
-                        9Diin의 TODO-BOARD
+                {/* todo 목록 ui 1개 */}
+                <div className="flex flex-col mt-4 gap-1">
+                    <small className="text-sm font-medium leading-none text-[#a6a6a6]">
+                        고마11의 TODO-board
                     </small>
                     <ul className="flex flex-col">
-                        <li className="flex items-center gap-2 py-2 px-[10px] bg-[#F5F5F5] rounded-sm text-sm">
-                            <div className="h-[6px] w-[6px] rounded-full bg-[#00F38D]"></div>
-                            Enter Title
+                        <li className="flex items-center py-2 px-[10px] gap-2 bg-[#f5f5f5]">
+                            <div className="h-[6px] w-[6px] bg-green-300 rounded-full"></div>
+                            리스트
                         </li>
-                        <li className="flex items-center gap-2 py-2 px-[10px] bg-[#F5F5F5] rounded-sm text-sm">
-                            <div className="h-[6px] w-[6px] rounded-full bg-[#00F38D]"></div>
-                            Enter Title
+                        <li className="flex items-center py-2 px-[10px] gap-2 bg-[#f5f5f5]">
+                            <div className="h-[6px] w-[6px] bg-green-300 rounded-full"></div>
+                            리스트
                         </li>
                     </ul>
                 </div>
@@ -39,7 +44,7 @@ function BoardPage() {
                             className={styles.header__top__input}
                         />
                         {/* 진행상황 척도 그래프 섹션 */}
-                        <div className="flex items-center justify-start gap-4">
+                        <div className="flex items-center justify-start pt-2 gap-4">
                             <small className="text-sm font-medium leading-none text-[#6D6D6D]">
                                 1/10 Completed
                             </small>
@@ -48,7 +53,10 @@ function BoardPage() {
                     </div>
                     <div className={styles.header__bottom}>
                         {/* 캘린더 + Add New Board 버튼 섹션 */}
-                        <div className="flex items-center"></div>
+                        <div className="flex items-center gap-5">
+                            <LabelDatePicker label={"From"}/>
+                            <LabelDatePicker label={"To"}/>
+                        </div>
                         <Button className="text-white bg-[#E79057] hover:bg-[#E79057] hover:border hover:border-ring hover:border-[#E26F24]">
                             Add New Board
                         </Button>
