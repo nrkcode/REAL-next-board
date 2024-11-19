@@ -53,7 +53,7 @@ function BoardPage() {
                             <small className="text-sm font-medium leading-none text-[#6D6D6D]">
                                 1/10 Completed
                             </small>
-                            <Progress className="w-60 h-[10px] value={33}" />
+                            <Progress className="w-60 h-[10px]" value={33} />
                         </div>
                     </div>
                     <div className={styles.header__bottom}>
