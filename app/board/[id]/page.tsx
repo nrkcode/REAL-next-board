@@ -80,6 +80,3 @@ function BoardPage() {
 }
 
 export default BoardPage;
-
-//There is no board yet.
-//Click the button and start flashing!
