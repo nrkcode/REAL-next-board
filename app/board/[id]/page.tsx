@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import { CardBoard } from "@/features";
 import { Button, SearchBar, Progress, LabelDatePicker } from "@/components/ui";
 import { ChevronLeft } from "lucide-react";
