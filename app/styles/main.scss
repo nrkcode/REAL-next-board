@@ -40,8 +40,9 @@
 
         // How to start 같은 콘텐츠 가운데 정렬
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         
     }
 }
