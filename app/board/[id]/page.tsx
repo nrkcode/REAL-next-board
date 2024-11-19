@@ -1,8 +1,8 @@
 import { Button, SearchBar } from "@/components/ui";
 
-function InitPage() {
-    return (
-        <div className="page">
+function BoardPage() {
+  return (
+    <div className="page">
             <aside className="page__aside">
                 {/* 검색창 ui */}
                 <SearchBar placeholder="검색어를 입력하세요."></SearchBar>
@@ -29,7 +29,7 @@ function InitPage() {
             </aside>
             <main className="page__main"></main>
         </div>
-    );
+  )
 }
 
-export default InitPage;
+export default BoardPage;
