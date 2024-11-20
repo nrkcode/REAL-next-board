@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { Button, SearchBar } from "@/components/ui";
 import { supabase } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
-import { error } from "console";
+
 
 function InitPage() {
     const router = useRouter();
@@ -18,7 +18,7 @@ function InitPage() {
             .insert([{ title: "", start_date: null, end_date: null, boards: [] }])
             .select();
 
-        // console.log(data);
+        console.log(data);
 
         if (status === 201&& data ) {
             /** TOAST UI 띄우기 */
@@ -27,15 +27,16 @@ function InitPage() {
                 title: "새로운 투두리스트가 생성",
                 description: "수파베이스확인",
             });
+            router.push(`/board/${data[0].id}`);
         }
-        router.push(`/board/${data[0].id}`);
+        
 
         if (error) {
             console.error(error);
             toast({
                 variant: "destructive",
                 title: "새로운 투두리스트가 생성",
-                description: "수파베이스확인",
+                description: "개발자 도구창을 확인하세요",
             });
         }
     };
@@ -82,7 +83,7 @@ function InitPage() {
                     </div>
                     <Button
                         className="text-[#E79057] bg-transparent border border-[#E79057] hover:bg-[#FFF9F5] w-[180px]"
-                        onClick={() => router.push("/board/1")}
+                        onClick={createPage}
                     >
                         Add New Page
                     </Button>
