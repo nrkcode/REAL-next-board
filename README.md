@@ -1,5 +1,4 @@
-## 앞부분 놓쳐서... 다시 공부하며 새로 만든 Next.js 교안 repository
-## ( 24-11-19 ~ )
+## 앞부분 놓쳐서... 다시 공부하며 새로 만든 Next.js 교안 repository ( 24-11-19 ~ )
 
 
 1. `npx shadcn@latest init` 해서 next.js 프로젝트 만들기
@@ -26,7 +25,8 @@
 - 왠지 위젯이 더 맞는 것 같기도... 아님말고... 어렵다!
 -- https://emewjin.github.io/feature-sliced-design/
 
-**남은 작업**
+---
+
 
 * 보드 추가를 위한 Add New Board 버튼 기능 구현
 
@@ -38,3 +38,8 @@
 
 등
 
+===
+
+1. React Markdown Editor 라이브러리 설치: `npm i @uiw/react-markdown-editor`
+2. 서버리스 데이터베이스 Supabase 설치: `npm install @supabase/supabase-js`
+3. 고유한 문자열 식별자 생성기 설치(nano-id): `npm install nanoid`

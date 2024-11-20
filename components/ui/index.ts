@@ -20,3 +20,15 @@ export { Progress } from "./progress/progress";
 export { Popover, PopoverTrigger, PopoverContent } from "./popover/popover";
 export { SearchBar } from "./search-bar/search-bar";
 export { Separator } from "./separator/separator";
+export {
+    type ToastProps,
+    type ToastActionElement,
+    ToastProvider,
+    ToastViewport,
+    Toast,
+    ToastTitle,
+    ToastDescription,
+    ToastClose,
+    ToastAction,
+  }
+ from "./toast/toast";  
